@@ -26,6 +26,8 @@ namespace KatanaIntro.Components
             {
                 return writer.WriteAsync("Hello !!!!!");
             };
+
+            //await _next.Invoke(environment);
         }
     }
 }
