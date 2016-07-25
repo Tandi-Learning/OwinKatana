@@ -1,5 +1,6 @@
 ﻿using KatanaIntro.Components;
 using KatanaIntro.Extensions;
+using Microsoft.Owin;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -8,22 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
 
+[assembly: OwinStartup(typeof(KatanaIntro.Startup))]
+
 namespace KatanaIntro
 {
     public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
-            //app.Use(async (env, next) =>
-            //{
-            //    foreach(var pair in env.Environment)
-            //    {
-            //        Console.WriteLine("{0} {1}", pair.Key, pair.Value);
-            //    }
-
-            //    await next();
-            //});
-
             app.Use(async (env, next) =>
             {
                 Console.WriteLine("Processing : " + env.Request.Path);
