@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KatanaIntroIIS.ViewModels
+namespace KatanaIntro.ViewModels
 {
     public class GreetingViewModel
     {
